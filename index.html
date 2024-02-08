@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Java Data Structure Decision Diagram</title>
+</head>
+<body>
+    <div class="uml-diagram">
+        <div class="decision-box" id="start">
+            <h3>Will it contain key/value pairs or values only?</h3>
+            <button onclick="showMapSection()">Pairs</button>
+            <button onclick="showValuesSection()">Values</button>
+        </div>
+
+        <div class="decision-box" id="mapSection" style="display: none;">
+            <h3>Is order important?</h3>
+            <button onclick="showHashMapSection()">No</button>
+            <button onclick="showTreeMapSection()">Yes</button>
+        </div>
+
+        <div class="decision-box" id="hashMapSection" style="display: none;">
+            <h3>Use HashMap</h3>
+        </div>
+
+        <div class="decision-box" id="treeMapSection" style="display: none;">
+            <h3>Insertion order or sorted by keys?</h3>
+            <button onclick="showLinkedHashMapSection()">Ordered</button>
+            <button onclick="showSortedTreeMapSection()">Sorted</button>
+        </div>
+
+        <div class="decision-box" id="linkedHashMapSection" style="display: none;">
+            <h3>Use LinkedHashMap</h3>
+        </div>
+
+        <div class="decision-box" id="sortedTreeMapSection" style="display: none;">
+            <h3>Use TreeMap</h3>
+        </div>
+
+        <div class="decision-box" id="valuesSection" style="display: none;">
+            <h3>Will it contain duplicates?</h3>
+            <button onclick="showSearchElementsSection()">No</button>
+            <button onclick="showInsertRemovalSection()">Yes</button>
+        </div>
+
+        <div class="decision-box" id="arrayListDecision" style="display: none;">
+            <h3>Use ArrayList</h3>
+        </div>
+
+        <div class="decision-box" id="linkedListDecision" style="display: none;">
+            <h3>Use LinkedList</h3>
+        </div>
+
+        <div class="decision-box" id="searchElementsSection" style="display: none;">
+            <h3>Is primary task searching for elements (contain/remove)?</h3>
+            <button onclick="showInsertRemovalSection()">No</button>
+            <button onclick="showIsOrderImportantSection()">Yes</button>
+        </div>
+
+        <div class="decision-box" id="insertRemovalSection" style="display: none;">
+            <h3>Do we need a lot of insertions/removals?</h3>
+            <button onclick="showArrayListDecision()">No</button>
+            <button onclick="showLinkedListDecision()">Yes</button>
+        </div>
+
+        <div class="decision-box" id="isOrderImportantSection" style="display: none;">
+            <h3>Is order important?</h3>
+            <button onclick="showHashSetDecision()">No</button>
+            <button onclick="showOrderSortedSection()">Yes</button>
+        </div>
+
+        <div class="decision-box" id="hashSetDecision" style="display: none;">
+            <h3>Use HashSet</h3>
+        </div>
+
+        <div class="decision-box" id="orderSortedSection" style="display: none;">
+            <h3>Insertion order or sorted values?</h3>
+            <button onclick="showLinkedHashSetSection()">Ordered</button>
+            <button onclick="showTreeSetSection()">Sorted</button>
+        </div>
+
+        <div class="decision-box" id="linkedHashSetSection" style="display: none;">
+            <h3>Use LinkedHashSet</h3>
+        </div>
+
+        <div class="decision-box" id="treeSetSection" style="display: none;">
+            <h3>Use TreeSet</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
